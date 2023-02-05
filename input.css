@@ -3,38 +3,3 @@
 @tailwind utilities;
 
 
-.ribon::before {
-  position: absolute;
-  font-size: 1.1rem;
-  left: 0;
-  right: auto;
-  transform: translate(29.29%, -100%) rotate(45deg);
-  color: #fff;
-  text-align: center;
-  border: 1px solid transparent;
-  border-bottom: 0;
-  transform-origin: bottom right;
-  padding: 5px 35px 23px;
-  background: linear-gradient(rgba(0, 0, 0, 0.3) 0 0) bottom/100% 15px no-repeat
-    #ff3f26;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    calc(100% - 15px) calc(100% - 15px),
-    15px calc(100% - 15px),
-    0 100%
-  );
-  -webkit-mask: linear-gradient(
-        135deg,
-        transparent calc(50% - 15px * 0.707),
-        #fff 0
-      )
-      bottom left,
-    linear-gradient(-135deg, transparent calc(50% - 15px * 0.707), #fff 0)
-      bottom right;
-  -webkit-mask-size: 300vmax 300vmax;
-  -webkit-mask-composite: destination-in, xor;
-  mask-composite: intersect;
-  transform: translate(-29.29%, -100%) rotate(-45deg);
-}

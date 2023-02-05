@@ -4,8 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Products</title>
     <link rel="stylesheet" href="./dist/output.css" />
+    <!-- Ribon custom CSS -->
+    <style>
+      .ribon {
+        transform: translate(29.29%, -100%) rotate(45deg);
+        background: linear-gradient(rgba(0, 0, 0, 0.3) 0 0) bottom/100% 15px
+          no-repeat #ff3f26;
+        clip-path: polygon(
+          0 0,
+          100% 0,
+          100% 100%,
+          calc(100% - 15px) calc(100% - 15px),
+          15px calc(100% - 15px),
+          0 100%
+        );
+        -webkit-mask: linear-gradient(
+              135deg,
+              transparent calc(50% - 15px * 0.707),
+              #fff 0
+            )
+            bottom left,
+          linear-gradient(-135deg, transparent calc(50% - 15px * 0.707), #fff 0)
+            bottom right;
+        -webkit-mask-size: 300vmax 300vmax;
+        -webkit-mask-composite: destination-in, xor;
+        mask-composite: intersect;
+        transform: translate(-29.29%, -100%) rotate(-45deg);
+      }
+    </style>
   </head>
   <body class="bg-white text-slate-900">
     <div class="wrapper">
@@ -23,8 +51,12 @@
         </div>
       </main>
       <!-- Products -->
-      <section>
-        <div class="container max-w-7xl m-auto px-10 py-16">
+      <section class="relative overflow-hidden">
+        <!-- Background -->
+        <div
+          class="background -z-10 absolute -right-[3rem] -top-[6rem] sm:-right-[5rem] sm:-top-[7rem] md:-right-[10rem] md:-top-[12rem] bg-gray-200 h-[25rem] w-[15rem] sm:h-[30rem] sm:w-[20rem] md:h-[40rem] md:w-[30rem] lg:h-[50rem] lg:w-[35rem] -rotate-[60deg] lg:-rotate-[55deg] rounded-2xl"
+        ></div>
+        <div class="container max-w-7xl m-auto px-10 py-16 relative">
           <div class="content grid gap-4">
             <!-- Introduction -->
             <p class="text-lg">
@@ -92,10 +124,12 @@
               class="items mt-6 gap-10 sm:gap-8 grid sm:grid-cols-2 lg:grid-cols-3 justify-between"
             >
               <!-- Item -->
-              <div class="item relative">
+              <div class="item relative bg-white">
                 <div
-                  class="ribon z-10 relative before:absolute before:content-['Hot_selling'] before:left-0 before:right-auto text-white before:border before:border-transparent before:border-b-0 before:text-center before:pt-[5px] before:pr-[35px] before:pb-[23px before:bg-clip-padding before:origin-bottom-right"
-                ></div>
+                  class="ribon z-10 absolute left-0 right-auto text-white border border-transparent border-b-0 text-center pt-[6px] pb-[23px] px-[35px] bg-clip-padding origin-bottom-right text-lg"
+                >
+                  Hot selling
+                </div>
 
                 <div class="content rounded-2xl grid shadow-lg overflow-hidden">
                   <div class="img relative">
@@ -104,7 +138,7 @@
                       >vehicle</span
                     >
                     <img
-                      class="max-h-[400px]"
+                      class="w-full"
                       src="./images/product/item-2.jpg"
                       alt="item"
                     />
@@ -136,10 +170,13 @@
                 </div>
               </div>
               <!-- Item -->
-              <div class="item relative">
+              <div class="item relative bg-white">
                 <div
-                  class="ribon z-10 relative before:absolute before:content-['Hot_selling'] before:left-0 before:right-auto text-white before:border before:border-transparent before:border-b-0 before:text-center before:pt-[5px] before:pr-[35px] before:pb-[23px before:bg-clip-padding before:origin-bottom-right"
-                ></div>
+                  class="ribon z-10 absolute left-0 right-auto text-white border border-transparent border-b-0 text-center pt-[6px] pb-[23px] px-[35px] bg-clip-padding origin-bottom-right text-lg"
+                  style=""
+                >
+                  Hot selling
+                </div>
 
                 <div class="content rounded-2xl grid shadow-lg overflow-hidden">
                   <div class="img relative">
@@ -148,7 +185,7 @@
                       >vehicle</span
                     >
                     <img
-                      class="max-h-[400px]"
+                      class="w-full"
                       src="./images/product/item-2.jpg"
                       alt="item"
                     />
@@ -180,10 +217,13 @@
                 </div>
               </div>
               <!-- Item -->
-              <div class="item relative">
+              <div class="item relative bg-white">
                 <div
-                  class="ribon z-10 relative before:absolute before:content-['Hot_selling'] before:left-0 before:right-auto text-white before:border before:border-transparent before:border-b-0 before:text-center before:pt-[5px] before:pr-[35px] before:pb-[23px before:bg-clip-padding before:origin-bottom-right"
-                ></div>
+                  class="ribon z-10 absolute left-0 right-auto text-white border border-transparent border-b-0 text-center pt-[6px] pb-[23px] px-[35px] bg-clip-padding origin-bottom-right text-lg"
+                  style=""
+                >
+                  Hot selling
+                </div>
 
                 <div class="content rounded-2xl grid shadow-lg overflow-hidden">
                   <div class="img relative">
@@ -192,7 +232,7 @@
                       >vehicle</span
                     >
                     <img
-                      class="max-h-[400px]"
+                      class="w-full"
                       src="./images/product/item-2.jpg"
                       alt="item"
                     />
@@ -229,10 +269,13 @@
               class="items mt-6 gap-10 sm:gap-8 grid sm:grid-cols-2 lg:grid-cols-3 justify-between hidden"
             >
               <!-- Item -->
-              <div class="item relative">
+              <div class="item relative bg-white">
                 <div
-                  class="ribon z-10 relative before:absolute before:content-['Hot_selling'] before:left-0 before:right-auto text-white before:border before:border-transparent before:border-b-0 before:text-center before:pt-[5px] before:pr-[35px] before:pb-[23px before:bg-clip-padding before:origin-bottom-right"
-                ></div>
+                  class="ribon z-10 absolute left-0 right-auto text-white border border-transparent border-b-0 text-center pt-[6px] pb-[23px] px-[35px] bg-clip-padding origin-bottom-right text-lg"
+                  style=""
+                >
+                  Hot selling
+                </div>
 
                 <div class="content rounded-2xl grid shadow-lg overflow-hidden">
                   <div class="img relative">
@@ -241,7 +284,7 @@
                       >medical</span
                     >
                     <img
-                      class="max-h-[400px]"
+                      class="w-full"
                       src="./images/product/item-1.jpg"
                       alt="item"
                     />
@@ -280,10 +323,13 @@
                 </div>
               </div>
               <!-- Item -->
-              <div class="item relative">
+              <div class="item relative bg-white">
                 <div
-                  class="ribon z-10 relative before:absolute before:content-['Hot_selling'] before:left-0 before:right-auto text-white before:border before:border-transparent before:border-b-0 before:text-center before:pt-[5px] before:pr-[35px] before:pb-[23px before:bg-clip-padding before:origin-bottom-right"
-                ></div>
+                  class="ribon z-10 absolute left-0 right-auto text-white border border-transparent border-b-0 text-center pt-[6px] pb-[23px] px-[35px] bg-clip-padding origin-bottom-right text-lg"
+                  style=""
+                >
+                  Hot selling
+                </div>
 
                 <div class="content rounded-2xl grid shadow-lg overflow-hidden">
                   <div class="img relative">
@@ -292,7 +338,7 @@
                       >medical</span
                     >
                     <img
-                      class="max-h-[400px]"
+                      class="w-full"
                       src="./images/product/item-1.jpg"
                       alt="item"
                     />
@@ -331,10 +377,13 @@
                 </div>
               </div>
               <!-- Item -->
-              <div class="item relative">
+              <div class="item relative bg-white">
                 <div
-                  class="ribon z-10 relative before:absolute before:content-['Hot_selling'] before:left-0 before:right-auto text-white before:border before:border-transparent before:border-b-0 before:text-center before:pt-[5px] before:pr-[35px] before:pb-[23px before:bg-clip-padding before:origin-bottom-right"
-                ></div>
+                  class="ribon z-10 absolute left-0 right-auto text-white border border-transparent border-b-0 text-center pt-[6px] pb-[23px] px-[35px] bg-clip-padding origin-bottom-right text-lg"
+                  style=""
+                >
+                  Hot selling
+                </div>
 
                 <div class="content rounded-2xl grid shadow-lg overflow-hidden">
                   <div class="img relative">
@@ -343,7 +392,7 @@
                       >medical</span
                     >
                     <img
-                      class="max-h-[400px]"
+                      class="w-full"
                       src="./images/product/item-1.jpg"
                       alt="item"
                     />
